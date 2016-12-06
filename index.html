@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<title>GCU // ericrook.us</title>
+		
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>	
+		<script type="text/javascript" src="js/script.js" ></script>
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/dropdown.css" />
+        <link rel="icon" href="img/fav.png" type="image/png"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no;">
+	</head>
+	<body>
+    
+    <div id="container">
+    	<div id="header">
+        	<img src="img/gcu.png" alt="GCU Logo" />
+        </div>
+        <div id="dd1" class="wrapper-dropdown-5 top" ><span id="select_year">Select Year</span>
+            <ul class="dropdown" id="years">
+            	
+            </ul>
+        </div>
+        <div id="dd2" class="wrapper-dropdown-5 top"><span id="select_make">Select Make</span>
+            <ul class="dropdown" id="car_make">
+                <li><a href="#">Select Year First</a></li>
+            </ul>
+        </div>
+        <div id="dd3" class="wrapper-dropdown-5 top"><span id="select_model">Select Model</span>
+            <ul class="dropdown" id="car_model">
+                <li><a href="#">Select Year Then Make First</a></li>
+            </ul>
+        </div>
+        
+        <div id="dd4" class="wrapper-dropdown-5 bottom"><span id="gas_left">Gas Guage</span>
+            <ul class="dropdown">
+                <li><a href="#" class="gas_left" rel="1">Full</a></li>
+                <li><a href="#" class="gas_left" rel="0.75">3/4</a></li>
+                <li><a href="#" class="gas_left" rel="0.5">1/2</a></li>
+                <li><a href="#" class="gas_left" rel="0.25">1/4</a></li>
+                <li><a href="#" class="gas_left" rel="0.0">Empty</a></li>
+            </ul>
+        </div>
+       
+        <form id="addressForm" action="get_results.php">
+        <fieldset>
+                <legend> </legend>
+        
+        	<div class="fromAddress"><div class="h2">From Address</div><input type="text" name="origin" id="origin" value="Enter Current Location"  onfocus="if(this.value  == 'Enter Current Location') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'Enter Current Location'; } " /></div>
+            <div class="fromLat"><input type="hidden" name="fromLat" id="fromLat" value="10"/></div><div class="fromLon"><input type="hidden" name="fromLon" id="fromLon" value="10"/></div>
+            <div class="h2">Destination Address</div>
+            <input type="text" name="destination" id="destination" value="Enter Destination Location" onfocus="if(this.value  == 'Enter Destination Location') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'Enter Destination Location'; } "/>
+        </fieldset>
+        </form>
+        
+        
+        <a href="#" class="button" id="submit">Make Selections Above</a>
+        
+	</div>	
+    <div id="responseContainer">	    
+   		<div id="response"><img src="img/loading.gif" alt="Loading..." /></div>
+        <a href="#" class="close">[X] CLOSE</a>
+    </div>
+    <div id="responsebg">&nbsp;</div>
+		
+	</body>
+</html>
